@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Credit Card Mask -->
+    <script>
+        function maskify(cc){
+            // slice(-4)參數是負數代表從字串的最後往前算四個位置，提取最後四個字串
+            // padStart(cc.length, '#') 剩下的字串依照長度會被#填充
+            return cc.slice(-4).padStart(cc.length, '#');
+        }
+
+        console.log(maskify("4556364607935616"));
+        console.log(maskify("64607935616"));
+        console.log(maskify("1"));
+        console.log(maskify(""));
+    </script>
+</body>
+</html>

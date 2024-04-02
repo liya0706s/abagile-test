@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Sum of Digits / Digital Root -->
+    <script>
+        function digitalRoot(n) {
+            // 定義變數sum，將數字轉換成字串toString()，使用 split('') 分割成單個字符的陣列
+            // 接著使用 map(Number) 將每個字符轉換回數字
+            // 用 reduce((acc, val) => acc + val, 0) 計算這些數字的總和
+            let sum = n.toString().split('').map(Number).reduce((acc, val) => acc + val, 0);
+            // 判斷總和是否為個位數，如果是，就返回該數字; 如果不是要繼續執行digitalRoot函式，直到結果為單一個位數
+            return (sum < 10) ? sum : digitalRoot(sum);
+        }
+
+        console.log(digitalRoot(16));
+        console.log(digitalRoot(942));
+        console.log(digitalRoot(132189));
+        console.log(digitalRoot(493193));
+
+    </script>
+</body>
+
+</html>

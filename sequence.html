@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Sum of a sequence -->
+    <script>
+        const sequenceSum=(bgin, end, step)=>{
+            // 先設定一個初始 總和result是0
+            let result = 0;
+            // i從begin開始，每次增加step, 直到i大於end
+            for (let i = begin; i<=end; i+=step){
+                // 每走step，就把那步的值加到result上
+                result +=i;
+            }
+            // 最後返回result的值
+            return result;
+        }
+
+        console.log(sequenceSum(2,6,2));
+    </script>
+</body>
+</html>
